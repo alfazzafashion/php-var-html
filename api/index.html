@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from www.unphp.net/api/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Mar 2022 05:59:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>UnPHP - API 2.0 Documentation</title>
+	<meta name="google-site-verification" content="0xYFmYfxY-Rtdz78iJQrzBVi1BYYY1UwalrNPMJowzo" />
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://unphp.s3.amazonaws.com/css/bootstrap.min.css?Signature=2r7iQFMAZlFUUDj0EuR%2FbiGR%2F1M%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA" rel="stylesheet">
+	<link href="https://unphp.s3.amazonaws.com/css/bootstrap-reset.css?Signature=PmRpngAtM2bAashykxes1rGqJyw%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA" rel="stylesheet">
+	<!--external css-->
+	<link href="https://unphp.s3.amazonaws.com/assets/font-awesome/css/font-awesome.css?Signature=pa0M3dwvTtMYx76YPjhclW9iU2U%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA" rel="stylesheet" />
+
+	<!-- Syntax Highlighting -->
+	<link href="https://unphp.s3.amazonaws.com/css/styles/default.css?Signature=mdViBUUQa%2BCeo0TPnMbVDVtdVWY%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA" rel="stylesheet">
+	
+	<!-- Custom styles for this template -->
+	<link href="https://unphp.s3.amazonaws.com/css/style.css?Signature=zo5czuBISnS0uMGHhi1r51juHys%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA" rel="stylesheet">
+	<link href="https://unphp.s3.amazonaws.com/css/style-responsive.css?Signature=TPRM8OaeY6FyHn0Tpsn194ySy7c%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA" rel="stylesheet" />
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://unphp.s3.amazonaws.com/js/html5shiv.js?Signature=MYxza2sTeV5%2BEHNuc1lelO2m%2BaI%3D&Expires=1646636345&AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+	  <script src="https://unphp.s3.amazonaws.com/js/respond.min.js?Signature=oXh2nrrziDpRYV7aEs8vFC2YFWk%3D&Expires=1646636345&AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+	<![endif]-->
+	<script src="https://unphp.s3.amazonaws.com/js/jquery.js?Signature=a9g0wGSg9LwRU%2BVjdsfRIe1ftqE%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+  </head>
+
+  <body class="full-width">
+
+  	<section id="container" class="">
+  		<header class="header white-bg">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="fa fa-bars"></span>
+				</button>
+
+				<!--logo start-->
+				<a href="../index.html" class="logo">Un<span>PHP</span></a>
+				<!--logo end-->
+				<div class="horizontal-menu navbar-collapse collapse ">
+					<ul class="nav navbar-nav">
+						<li ><a href="../index.html">Decode</a></li>
+						<li ><a href="../recent/index.html">Recent</a></li>
+						<li class="active"><a href="index.html">API</a></li>
+						
+						<li ><a href="../services/index.html">Services</a></li>
+						<li ><a href="../contact/index.html" class="active">Contact</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+		</header>
+
+		<section id="main-content">
+			<section class="wrapper">
+				
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel main-header">
+							<div class="panel-heading">
+							
+							  	<h1>API 2.0 Documentation</h1>
+								  	
+								  	<p class="lead">Decode PHP scripts in bulk.</p>
+								  	
+							  	
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+<div class="row">
+	<div class="col-md-12 form-horizontal">
+        <div class="panel">
+            <div class="panel-heading">
+                <h4>Overview</h4>
+            </div>
+            <div class="panel-body">
+                <p>The API expect a multi-part HTTP POST request to <strong>http://www.unphp.net/api/v2/post</strong>. The following parameters are required:</p>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>api_key</td>
+                            <td>An API key for your application. You can <a href="request/index.html">request one automatically</a> for free.</td>
+                        </tr>
+                        <tr>
+                            <td>file</td>
+                            <td>The content of the PHP file to decode. The file should be multipart-encoded.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+        		<h4>Python Example</h4>
+            </div>
+            <div class="panel-body">
+
+        		<p>Using the API in Python with the help of the <a href="http://docs.python-requests.org/en/latest/" target="_blank">Requests module</a> is a cinch:
+        		<pre><code class="python">import requests
+
+test_file = 'mysample.php'
+data = {
+    'api_key' : '1c2755023f354893ed17c99182d44464',
+}
+
+files = {'file' : open(test_file, 'rb')}
+r = requests.post('http://www.unphp.net/api/v2/post', files=files, data=data)</code></pre>
+            </div>
+        </div>
+
+		<div class="panel">
+            <div class="panel-heading">
+                <h4>PHP Example</h4>
+            </div>
+            <div class="panel-body">
+        		<p>You can easily do the same thing in PHP with Curl.</p>
+        		<pre><code class="php">&lt;?php
+    $post = array(
+         &quot;file&quot;=&gt;&quot;@a.php&quot;,
+         &quot;api_key&quot;=&gt;&quot;1c2755023f354893ed17c99182d44464&quot;,
+    );
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, &#39;http://www.unphp.net/api/v2/post&#39;);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    echo curl_exec($ch);
+    echo curl_error($ch);
+    curl_close($ch);
+?&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <h4>CURL Example</h4>
+            </div>
+            <div class="panel-body">
+                <p>You can also decode files from the command line using the 'curl' command:</p>
+                <pre><code class="bash">$ curl -i -F api_key=1c2755023f354893ed17c99182d44464 -F <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="6107080d045c210419000c110d044f110911">[email&#160;protected]</a> http://www.unphp.net/api/v2/post</code></pre>
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="panel-heading">
+                <h4>Bash Command Line Example</h4>
+            </div>
+            <div class="panel-body">
+                <p>Using bash scripting you can also call the UnPHP API from the command line. Just replace the API key below with yours and then you can call it as a bash function.</p>
+        
+                <pre class="prettyprint"><code class="bash">$ unphp(){ curl -LF "api_key=1c2755023f354893ed17c99182d44464" -F "<a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="6e0807020b532e">[email&#160;protected]</a>$*" 'http://www.unphp.net/api/v2/post'|python2.7 -c'import sys,json;j=json.loads(sys.stdin.read());print j["output"] if j["result"]=="success" else False'|sed 's,api/v2,decode,';};
+$ unphp mysample.php</code></pre>
+            </div>
+        </div>
+		<div class="panel">
+            <div class="panel-heading">
+                <h4>Sample Response</h4>
+            </div>
+            <div class="panel-body">
+        		<p>All calls to the API will return an JSON object. If successful, the JSON object will contain metadata about the decoding process as well as a URL to the decoded script (available in the 'decoded' field).</p>
+
+        		<pre><code class="javascript">{
+    "functions": {
+        "get_option": 1,
+        "base64_decode": 1,
+        "gzinflate": 1,
+        "stripslashes": 1
+    },
+    "if_chain": [],
+    "variables": {},
+    "emails": [],
+    "eval_count": 1,
+    "result": "success",
+    "urls": ["http://www.freethemelayouts.com/", "http://www.iwebsitetemplate.com"],
+    "output": "http://www.unphp.net/api/v2/27c3fafda955160b98536e9dc194a785/decoded?api_key=1c2755023f354893ed17c99182d44464",
+    "md5": "27c3fafda955160b98536e9dc194a785",
+    "function_chain": ["base64_decode", "gzinflate", "stripslashes", "get_option"],
+    "final_exception": "PHP function get_option() not defined",
+    "size": 625
+}
+</code></pre>
+        </div>
+    </div>
+	
+	<div class="panel">
+        <div class="panel-heading">
+            <h4>Sample Error Message</h4>
+        </div>
+        <div class="panel-body">
+	<p>If there was a problem with the decoding process the 'result' field will equal 'error'. You can get additional information about the error in the 'message' field.
+	<pre><code class="javascript">{
+	"message": "Not all parameters specified",
+	"result": "error"
+}</code></pre>
+        </div>
+    </div>
+
+</div>
+
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- UnPHP -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8836872255268643"
+     data-ad-slot="3362416014"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+					</div>
+				</div>
+			</section>
+		</section>
+
+
+		<footer class="site-footer">
+			<div class="text-center">
+				By using the UnPHP decoder you agree to our <a href="../terms/index.html">Terms of Use</a>. Need Shopify Apps or Ecommerce Solutions? <a href="https://www.ablestar.co/" target="_blank">Check out Ablestar</a>.
+				<a href="#" class="go-top">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</div>
+		</footer>
+	</section>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="https://unphp.s3.amazonaws.com/js/bootstrap.min.js?Signature=%2Bk%2BWd%2FLdqiyGHuYPa9C9aa4fVyo%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+<script src="https://unphp.s3.amazonaws.com/js/respond.min.js?Signature=oXh2nrrziDpRYV7aEs8vFC2YFWk%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+
+<!--common script for all pages-->
+<script src="https://unphp.s3.amazonaws.com/js/common-scripts.js?Signature=RUGZzq09mQTvu%2BGE4auK9YS1lOg%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+
+
+<script src="https://unphp.s3.amazonaws.com/js/highlight.pack.js?Signature=NScIE6Qc%2BBVbHaOIPeUucE1ZROc%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+
+<script src="https://unphp.s3.amazonaws.com/js/api.js?Signature=3RPSJ0SQpBW53uiYNYztswzD99U%3D&amp;Expires=1646636345&amp;AWSAccessKeyId=AKIAJVHIUDJUMSQIWYKA"></script>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39086730-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+
+<!-- Mirrored from www.unphp.net/api/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Mar 2022 05:59:12 GMT -->
+</html>
