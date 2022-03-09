@@ -1,6 +1,5 @@
 ---------
 # LICENSE
----------
 
 Copyright by Code Boxx
 
@@ -23,7 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-MORE
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-Please visit https://code-boxx.com/ for more!
+---------
+Please visit [code-boxx](https://code-boxx.com/) for more!
+---------
+
+
